@@ -9,9 +9,8 @@ group :production do
 	gem 'pg'
 end
 
-group :devlopment, :test do
-    gem 'sqlite3'
-end
+    gem 'sqlite3', :group => [:development, :test]
+    
 
 # Gems used only for assets and not required
 # in production environments by default.
