@@ -1,13 +1,13 @@
-<h2>Sign in</h2>
+<h2>登入</h2>
 
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
   <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :remember_me, as: :boolean %>
+  <%= f.input :password ,label: '密碼'%>
+  <%= f.input :remember_me, as: :boolean ,label: '記得我的登入'%>
 
   <div class="form-actions">
-    <%= f.submit "Sign in", class: "btn btn-primary" %>
+    <%= f.submit "登入！", class: "btn btn-primary" %>
   </div>
 <% end %>
 
