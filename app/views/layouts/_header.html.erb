@@ -10,7 +10,8 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">賣場設計</a>
+      
+      <%= link_to "賣場設計", root_path,class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -20,7 +21,12 @@
 </ul>
 <ul class="nav pull-right">
 
-<li><%= link_to "登入","#" %></li>
+  <% if user_signed_in? %>
+  <li><%= link_to "編輯帳號",edit_user_registration_path %></li>
+<li><%= link_to "登出",destroy_user_session_path, method: :delete %></li>
+<% else %>
+<li><%= link_to "登入",new_user_session_path %></li>
+<% end %>
 </ul>
 
         <!-- .nav, .navbar-search, .navbar-form, etc -->

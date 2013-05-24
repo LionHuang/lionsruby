@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="hero-unit">
 <h1>賣場設計</h1>
 <br>
@@ -9,9 +10,27 @@
 <br>
 <p>
 
-<%= link_to "天啊，我等不及了","#" ,class: "btn btn-primary btn-large"%>
+<%= link_to "你已經登入了！","#" ,class: "btn btn-primary btn-large"%>
 
 </p>
 </div>
 
 
+<% else %>
+
+<div class="hero-unit">
+<h1>賣場設計</h1>
+<br>
+<p>
+
+這網站就是要讓你輕鬆簡單的設計你的賣場畫面...應該會很輕鬆的，應該。
+
+</p>
+<br>
+<p>
+
+<%= link_to "天啊，我等不及了，快給我一個帳號！",new_user_registration_path ,class: "btn btn-primary btn-large"%>
+
+</p>
+</div>
+<% end %>
