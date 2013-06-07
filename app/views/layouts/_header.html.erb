@@ -22,6 +22,7 @@
 <ul class="nav pull-right">
 
   <% if user_signed_in? %>
+  <li><%= link_to "發佈訊息",new_pin_path %></li>
   <li><%= link_to "編輯帳號",edit_user_registration_path %></li>
 <li><%= link_to "登出",destroy_user_session_path, method: :delete %></li>
 <% else %>
